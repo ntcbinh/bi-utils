@@ -1,14 +1,25 @@
 {
-  "name": "bin-utils",
+  "name": "@bin-ntc/bin-utils",
   "version": "1.0.0",
   "description": "Some easy to use utils for any project by Binh Nguyen",
-  "main": "index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "build": "tsup index.ts --format cjs,esm --dts --clean",
     "test": "jest",
     "test:watch": "jest --watch",
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint": "eslint . --ext .ts,.js",
+    "lint:fix": "eslint . --ext .ts,.js --fix"
   },
-  "keywords": [],
+  "keywords": [
+    "typescript",
+    "utils",
+    "helpers"
+  ],
   "author": {
     "name": "Binh Nguyen",
     "email": "ntcbinh16@gmail.com",
@@ -34,11 +45,9 @@
     "prettier": "^3.6.2",
     "ts-jest": "^29.4.5",
     "ts-node": "^10.9.2",
+    "tsup": "^8.5.1",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.46.4"
-  },
-  "dependencies": {
-    "ts-node": "^10.9.2"
   },
   "lint-staged": {
     "*.{ts,js,css,md}": "prettier --write",
