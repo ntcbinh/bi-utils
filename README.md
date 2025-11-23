@@ -20,6 +20,7 @@ Perfect for any JavaScript/TypeScript project that needs clean, reusable utiliti
   - Date helpers
   - Async patterns
   - Validation tools
+  - Number utilities
 
 ---
 
